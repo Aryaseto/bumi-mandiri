@@ -1,0 +1,5 @@
+@extends('layouts.error')
+@section('code', '500')
+@section('title', 'Terjadi Kesalahan | Bumi Mandiri')
+@section('message', 'Kami sedang merapikan jalur ini.')
+@section('description', 'Terjadi kesalahan pada server. Coba muat ulang beberapa saat lagi atau hubungi kami jika masih berlanjut.')

@@ -1,0 +1,5 @@
+@extends('layouts.error')
+@section('code', '422')
+@section('title', 'Permintaan Tidak Valid | Bumi Mandiri')
+@section('message', 'Ada isian yang perlu diperbaiki.')
+@section('description', 'Data yang dikirim tidak dapat diproses. Periksa kembali isian Anda, lalu coba lagi.')

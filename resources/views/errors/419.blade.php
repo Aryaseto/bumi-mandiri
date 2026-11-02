@@ -1,0 +1,5 @@
+@extends('layouts.error')
+@section('code', '419')
+@section('title', 'Sesi Berakhir | Bumi Mandiri')
+@section('message', 'Sesi Anda sudah berakhir.')
+@section('description', 'Halaman terlalu lama dibiarkan terbuka. Muat ulang halaman, lalu coba lagi.')

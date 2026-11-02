@@ -1,0 +1,285 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+        @apply bg-cream text-charcoal;
+        text-rendering: optimizeLegibility;
+    }
+
+    h1, h2, h3, h4 {
+        @apply font-heading;
+        text-wrap: balance;
+    }
+
+    ::selection {
+        background: #9E5732;
+        color: #FAF6EE;
+    }
+
+    :focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 3px;
+    }
+
+    [x-cloak] {
+        display: none !important;
+    }
+
+    input, select, textarea {
+        font-size: 16px;
+    }
+
+    @media (min-width: 768px) {
+        input, select, textarea {
+            font-size: 0.875rem;
+        }
+    }
+}
+
+@layer components {
+    .container-page {
+        @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-10;
+    }
+
+    .btn {
+        @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition;
+        min-height: 44px;
+        transition-duration: 200ms;
+        transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn:active {
+        transform: translateY(1px);
+    }
+
+    .btn-primary {
+        @apply bg-forest text-cream hover:bg-forest-light;
+    }
+
+    .btn-accent {
+        @apply bg-earth text-white hover:bg-earth-dark;
+    }
+
+    .btn-secondary {
+        @apply border border-forest/20 bg-transparent text-forest hover:border-forest/40 hover:bg-forest/5;
+    }
+
+    .btn-light {
+        @apply bg-cream text-forest hover:bg-white;
+    }
+
+    .btn-ghost-light {
+        @apply border border-cream/40 text-cream hover:bg-cream/10;
+    }
+
+    .btn-sm {
+        @apply px-4 py-2 text-xs;
+        min-height: 38px;
+    }
+
+    .eyebrow {
+        @apply text-[11px] font-semibold uppercase tracking-[0.2em];
+    }
+
+    .field-label {
+        @apply mb-1.5 block text-sm font-medium text-forest;
+    }
+
+    .field {
+        @apply w-full rounded-xl border border-sand bg-white px-4 py-3 text-sm text-charcoal placeholder:text-charcoal/70 transition focus:border-nature focus:outline-none focus:ring-2 focus:ring-nature/20;
+    }
+
+    .field-error {
+        @apply mt-1.5 text-xs font-medium text-red-700;
+    }
+
+    .card {
+        @apply rounded-2xl border border-forest/10 bg-white;
+    }
+
+    .link-underline {
+        @apply font-semibold text-forest underline decoration-earth/50 decoration-2 underline-offset-4 transition hover:decoration-earth;
+    }
+
+    .surface-note {
+        @apply rounded-2xl border border-earth/20 bg-earth/[0.06] p-5 text-sm text-charcoal/75;
+    }
+
+    .prose-bumi {
+        @apply text-[15px] leading-7 text-charcoal/75;
+    }
+
+    .prose-bumi p {
+        @apply mb-5;
+    }
+
+    .prose-bumi h2 {
+        @apply mb-3 mt-8 text-xl font-bold text-forest;
+    }
+
+    .prose-bumi h3 {
+        @apply mb-2 mt-6 text-lg font-semibold text-forest;
+    }
+
+    .prose-bumi ul {
+        @apply mb-5 list-disc space-y-2 pl-5;
+    }
+
+    /* Admin */
+    .admin-card {
+        @apply rounded-2xl border border-forest/10 bg-white;
+    }
+
+    .admin-table {
+        @apply w-full text-sm;
+    }
+
+    .admin-table thead th {
+        @apply border-b border-sand bg-sand-light/60 px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-wider text-charcoal/70;
+    }
+
+    .admin-table tbody td {
+        @apply border-b border-sand/60 px-4 py-3.5 align-middle;
+    }
+
+    .admin-table tbody tr {
+        @apply transition-colors hover:bg-sand-light/40;
+    }
+
+    .admin-table tbody tr:last-child td {
+        @apply border-b-0;
+    }
+
+    .admin-table-compact thead th,
+    .admin-table-compact tbody td {
+        @apply px-3;
+    }
+
+    .admin-action {
+        @apply inline-flex items-center gap-1 rounded-lg px-2.5 py-1.5 text-xs font-semibold transition;
+    }
+
+    .admin-action-edit {
+        @apply text-nature hover:bg-nature/10;
+    }
+
+    .admin-action-delete {
+        @apply text-red-700 hover:bg-red-50;
+    }
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+
+    .text-pretty {
+        text-wrap: pretty;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
+
+/* Subtle reveal used on the public site. Motion is decorative only. */
+@keyframes rise-in {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    animation: rise-in 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.reveal-delay-1 { animation-delay: 90ms; }
+.reveal-delay-2 { animation-delay: 180ms; }
+.reveal-delay-3 { animation-delay: 270ms; }
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F3ECE0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #C9BEAC;
+    border-radius: 999px;
+    border: 2px solid #F3ECE0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #A99C88;
+}
+
+/* Laravel pagination */
+.pagination-wrap nav {
+    @apply flex flex-wrap items-center justify-between gap-3 text-sm;
+}
+
+.pagination-wrap nav p {
+    @apply text-charcoal/70;
+}
+
+.pagination-wrap nav > div:last-child {
+    @apply flex flex-wrap items-center gap-1;
+}
+
+.pagination-wrap a,
+.pagination-wrap span[aria-current="page"] > span,
+.pagination-wrap span[aria-disabled="true"] > span {
+    @apply inline-flex min-w-[38px] items-center justify-center rounded-lg border border-sand px-3 py-2 text-sm transition;
+}
+
+.pagination-wrap a {
+    @apply bg-white text-forest hover:border-forest/30 hover:bg-sand-light;
+}
+
+.pagination-wrap span[aria-current="page"] > span {
+    @apply border-forest bg-forest text-cream;
+}
+
+.pagination-wrap span[aria-disabled="true"] > span {
+    @apply bg-sand-light text-charcoal/70;
+}

@@ -1,0 +1,5 @@
+@extends('layouts.error')
+@section('code', '403')
+@section('title', 'Akses Dibatasi | Bumi Mandiri')
+@section('message', 'Jalur ini tidak terbuka untuk Anda.')
+@section('description', 'Akun Anda tidak memiliki izin untuk membuka halaman ini. Kembali ke beranda atau hubungi kami jika merasa ini keliru.')

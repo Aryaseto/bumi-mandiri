@@ -1,0 +1,5 @@
+@extends('layouts.error')
+@section('code', '404')
+@section('title', 'Halaman Tidak Ditemukan | Bumi Mandiri')
+@section('message', 'Sepertinya Anda salah jalur.')
+@section('description', 'Halaman yang Anda cari tidak ditemukan atau sudah dipindahkan. Mari kembali ke jalur utama.')

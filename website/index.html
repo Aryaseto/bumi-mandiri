@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bumi Mandiri — Portal Kegenda</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero">
+    <nav class="navbar">
+      <div class="container navbar__inner">
+        <a href="index.html" class="navbar__logo">Bumi Mandiri</a>
+        <button class="navbar__toggle" aria-label="Buka menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+        <ul class="navbar__menu">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#proyek">Proyek</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="hero__inner">
+      <p class="eyebrow">Portal Kegenda Indonesia</p>
+      <h1 class="hero__title">Halo, saya <span class="hero__name">Bumi Mandiri</span><br>Saya pembangun dunia digital.</h1>
+      <p class="hero__sub">Saya adalah seorang desainer & pengembang yang fokus pada kemudahan, keindahan, dan fungsionalitas.</p>
+      <div class="hero__actions">
+        <a href="#kontak" class="btn btn--primary">Hubungi Saya</a>
+        <a href="#proyek" class="btn btn--ghost">Lihat Proyek</a>
+      </div>
+      <div class="hero__social">
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+      </div>
+    </section>
+  </header>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <h2 class="section__title">Tentang Saya</h2>
+      <div class="about__grid">
+        <div class="about__text">
+          <p>Saya membantu perusahaan dan kreator mewujudkan proyek digital mereka dengan desain yang matang serta kode yang bersih.</p>
+          <p>Antusiasme, komunikasi yang baik, dan keterampilan teknis adalah tiga hal yang paling saya jaga setiap bekerja.</p>
+        </div>
+        <ul class="about__cards">
+          <li>
+            <h3>01</h3>
+            <h4>Desain UI/UX</h4>
+            <p>Mengubah ide menjadi antarmuka yang intuitif dan menarik.</p>
+          </li>
+          <li>
+            <h3>02</h3>
+            <h4>Pengembangan Web</h4>
+            <p>Membangun situs dan aplikasi dengan teknologi modern.</p>
+          </li>
+          <li>
+            <h3>03</h3>
+            <h4>Optimasi</h4>
+            <p>Memastikan hasil selalu cepat, ringan, dan mudah diakses.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJEK ===================== -->
+  <section class="section proyek" id="proyek">
+    <div class="container">
+      <h2 class="section__title">Proyek Terbaik</h2>
+      <p class="section__lead">Beberapa karya yang pernah saya kerjakan.</p>
+      <div class="proyek__grid">
+        <article class="card">
+          <div class="card__img"></div>
+          <div class="card__body">
+            <h3>E-commerce Digital</h3>
+            <p>Toko online dengan halaman produk, keranjang, dan pembayaran yang akurat.</p>
+            <a href="#" class="card__link">Selengkapnya →</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"></div>
+          <div class="card__body">
+            <h3>Dashboard Analitik</h3>
+            <p>Laporan data real-time dengan grafik yang mudah dipahami.</p>
+            <a href="#" class="card__link">Selengkapnya →</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__img"></div>
+          <div class="card__body">
+            <h3>Aplikasi Resto</h3>
+            <p>Menu, pemesanan online, dan sistem pajak sederhana.</p>
+            <a href="#" class="card__link">Selengkapnya →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== KONTAK ===================== -->
+  <section class="section kontak" id="kontak">
+    <div class="container">
+      <h2 class="section__title">Kontak</h2>
+      <p class="section__lead">Kirim pesan, saya akan balas dalam waktu singkat.</p>
+      <form class="kontak__form" id="formKontak">
+        <div class="form__field">
+          <label for="nama">Nama</label>
+          <input type="text" id="nama" name="nama" placeholder="Nama Anda" required>
+        </div>
+        <div class="form__field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Email Anda" required>
+        </div>
+        <div class="form__field">
+          <label for="pesan">Pesan</label>
+          <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesannya..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary">Kirim Pesan</button>
+        <p class="form__status" id="statusPesan" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Bumi Mandiri. Dibuat dengan HTML, CSS, dan JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
